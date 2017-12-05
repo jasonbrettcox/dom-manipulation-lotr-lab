@@ -54,6 +54,7 @@ function makeHobbits() {
   // display an unordered list of hobbits in the shire (which is the first article tag on the page)
   // give each hobbit a class of hobbit
 var ul = document.createElement('ul');
+  ul.className = "hobbits";
   hobbits.forEach(function (hobbits){
 
     var listElement = document.createElement("li");
@@ -74,20 +75,6 @@ var ul = document.createElement('ul');
  }
 
 makeHobbits();
-
-
-
-
-
-
-
-
-  
-
-
-
-
-
 
 // Part 3
 
@@ -152,7 +139,16 @@ beautifulStranger();
 
 function leaveTheShire() {
   // assemble the hobbits and move them to Rivendell
+var hobbits = document.getElementsByClassName("hobbits")[0];
+  
+
+ var rivendell = document.querySelectorAll('article')[1];
+  rivendell.appendChild(hobbits);
+
+
+ // getappendChild
 }
+leaveTheShire();
 
 
 // Part 7
